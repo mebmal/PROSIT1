@@ -6,7 +6,7 @@ DistanceCalculation::DistanceCalculation(void)
 }
 DistanceCalculation::DistanceCalculation(int x1, int x2, int y1, int y2)
 {
-	this->ini_obj(x1, y1, x2, y2);
+	this->ini_obj(x1, x2, y1, y2);
 }
 void DistanceCalculation::ini_obj(int x1, int x2, int y1, int y2)
 {
@@ -17,7 +17,7 @@ void DistanceCalculation::ini_obj(int x1, int x2, int y1, int y2)
 }
 double DistanceCalculation::calculateDistance(void)
 {
-	double calcul = sqrt(pow(get_x1() - get_x2(), 2) + pow(get_y1() - get_y2(), 2));
+	double calcul = sqrt(pow(this->get_x1() - this->get_x2(), 2) + pow(this->get_y1() - this->get_y2(), 2));
 	return calcul;
 }
 
